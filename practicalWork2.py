@@ -70,3 +70,105 @@ print("{:7.3f} {:7.3f}".format(a, b))
 print("{:10.3e} {:10.3e}".format(a, b))
 # 4.
 print(n1 + ' plus ' + n2 + ' = ', '{:10.3f}'.format(n3))
+
+# Списки
+
+list2 = [82, 8, 23, 97, 92, 44, 17, 39, 11, 12]
+# print(dir(list2))
+# dir(list2)
+#
+help(list2.insert)
+""" insert(index, object, /) метод экземпляра встроенного списка.
+Вставить объект перед индексом.
+"""
+help(list2.append)
+""" append(object, /) метод экземпляра встроенного списка.
+Добавить объект в конец списка.
+"""
+help(list2.sort)
+""" sort(*, key=None, reverse=False)
+метод экземпляра встроенного списка.
+Отсортируйте список в порядке возрастания и верните None.
+Сортировка оперативная (т.е. сам список изменяется) и стабильная (т.е.
+сохраняется порядок двух равных элементов).
+Если дана ключевая функция, примените ее один раз к каждому элементу списка и отсортируйте их,
+по возрастанию или по убыванию, в соответствии со значениями их функций.
+Флаг реверса может быть установлен для сортировки в порядке убывания.
+"""
+help(list2.remove)
+""" remove(value, /) метод экземпляра встроенного списка.
+Удалить первое вхождение значения.
+Вызывает ValueError, если значение отсутствует.
+"""
+help(list2.reverse)
+"""reverse() метод экземпляра встроенного списка.
+Реверс *НА МЕСТЕ*.
+"""
+list2 = [82, 8, 23, 97, 92, 44, 17, 39, 11, 12]
+list2[4] = 8
+# list2 = [82, 8, 23, 97, 8, 44, 17, 39, 11, 12]
+list2.append(99)
+# list2 = [82, 8, 23, 97, 8, 44, 17, 39, 11, 12, 99]
+list2.insert(1, 13)
+# list2 = [82, 13, 8, 23, 97, 8, 44, 17, 39, 11, 12, 99]
+list2.pop(3)
+# list2 = [82, 13, 8, 97, 8, 44, 17, 39, 11, 12, 99]
+list2.pop(len(list2) - 1)
+# list2 = [82, 13, 8, 97, 8, 44, 17, 39, 11, 12]
+print(list2)
+
+# Сортировка элементов списка
+list2.sort(reverse=True)
+print(list2)
+#
+list2_2 = [3, 5, 6, 2, 33, 6, 11]
+lis = sorted(list2_2)
+print(lis)
+
+# Кортежи (tuple)
+help(dir(tuple))
+help(tuple.index)
+"""index(self, value, start=0, stop=9223372036854775807, /)
+Возвращает первый индекс значения.
+Вызывает ValueError, если значение отсутствует.
+"""
+help(tuple.count)
+"""count(self, value, /)
+Возвращает количество вхождений значения.
+"""
+seq = (2, 8, 23, 97, 92, 44, 17, 39, 11, 12)
+print(seq.count(8))
+# 1
+print(seq.index(44))
+# 5
+listseq = list(seq)
+print(type(listseq))
+# <class 'list'>
+print(listseq)
+listseq.sort()
+# [2, 8, 23, 97, 92, 44, 17, 39, 11, 12]
+listseq.insert(9, 1)
+# [2, 8, 11, 12, 17, 23, 39, 44, 92, 1, 97]
+print(listseq)
+
+# Словари
+D = {"food": "Apple", "quantity": 4, "color": "Red"}
+print(D["food"])
+D["quantity"] += 10
+print(D["quantity"])
+dp = {}
+dp["name"] = input("Введите название: ")
+dp["age"] = input("Введите возраст: ")
+print(dp)
+
+# Вложенность хранения данных
+rec = {"name": {"firstname": "Bob", "lastname": "Smith"}, "job": ["dev", "mgr"], "age": 25}
+print(rec["name"]["firstname"], rec["name"]["lastname"])
+# Bob Smith
+print(rec["name"]["firstname"])
+# Bob
+print(rec["job"])
+# ['dev', 'mgr']
+rec["job"].append("janitor")
+print(rec["name"]["firstname"], rec["name"]["lastname"], rec["job"], rec["age"])
+# Bob Smith ['dev', 'mgr', 'janitor'] 25
