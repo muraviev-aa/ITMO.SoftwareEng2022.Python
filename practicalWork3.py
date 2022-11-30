@@ -1,4 +1,5 @@
 # PracticalWork3.
+# Работа с модулями стандартной библиотеки
 
 import math
 import random
