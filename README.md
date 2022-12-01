@@ -20,15 +20,16 @@
 
    * LaboratoryWork1.py
 
-<url> &#128194; PracticalWork5</url> 
+<strong>Python_Руководство:</strong>
 
-Python_Руководство:
+
+<url> &#128194; PracticalWork5</url> 
 
    * practicalWork5Multimodul.py
    * practicalWork5OneModul.py
 
 
-Python_Руководство:
+Отдельные файлы:
    * practicalWork1.py
    * practicalWork2.py
    * practicalWork3.py
